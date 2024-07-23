@@ -1,4 +1,3 @@
-using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using Code.Configs;
@@ -6,8 +5,6 @@ using Code.Controller;
 using Code.Model;
 using Code.Server;
 using Code.View;
-using Unity.VisualScripting;
-using UnityEditor.VersionControl;
 using UnityEngine;
 using Task = System.Threading.Tasks.Task;
 
@@ -26,9 +23,9 @@ public class DiceRotationController : IDiceRotationController
     }
 
 
-    public async void RollDices()
+    public async Task RollDices()
     {
-        _diceViews.ForEach(dice=>GameObject.Destroy(dice.gameObject));
+        _diceViews.ForEach(dice => GameObject.Destroy(dice.gameObject));
         _diceViews.Clear();
         List<DiceModel> values = await _diceSideInformationService.GetDiceInformation();
         _diceViews = _dicePositionConfig.Positions.Take(values.Count)

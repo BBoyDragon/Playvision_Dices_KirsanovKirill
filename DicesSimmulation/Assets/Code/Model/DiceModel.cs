@@ -1,12 +1,17 @@
+using System;
+
 namespace Code.Model
 {
+    [Serializable]
     public class DiceModel
     {
-        public int value;
+        public int Value { get; set; }
+        public DiceModel(){}
+
 
         public DiceModel(int value)
         {
-            this.value = value;
+            this.Value = value;
         }
     }
 }

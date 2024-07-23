@@ -29,7 +29,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4929767673425836501}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -6, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -124,8 +124,8 @@ MonoBehaviour:
   initialForceMax: 15
   initialTorqueMin: 10
   initialTorqueMax: 15
-  correctionTorque: 10
-  correctionSpeed: 1
+  correctionTorque: 5
+  correctionSpeed: 0.5
 --- !u!54 &5058857120635512127
 Rigidbody:
   m_ObjectHideFlags: 0

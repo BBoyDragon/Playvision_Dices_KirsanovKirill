@@ -1,4 +1,5 @@
 using System;
+using System.Threading.Tasks;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -7,7 +8,7 @@ namespace Code.View
     public class RollButtonView: MonoBehaviour
     {
         [SerializeField] private Button _rollButton;
-        public event Action OnButtonPressed;
+        public event Func<Task> OnButtonPressed;
 
         private void Start()
         {

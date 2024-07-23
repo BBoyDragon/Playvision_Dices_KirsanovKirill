@@ -20,19 +20,14 @@ namespace Code.View
         private Rigidbody rb;
         private bool _wasRolled = false;
         private Quaternion targetRotation;
-
-        void Start()
-        {
-            rb = GetComponent<Rigidbody>();
-        }
-
+        
         public void Roll(DiceModel diceModel)
         {
             if (rb == null)
             {
                 rb = GetComponent<Rigidbody>();
             }
-            targetRotation = GetTargetRotation(diceModel.value);
+            targetRotation = GetTargetRotation(diceModel.Value);
 
             Vector3 randomForceDirection = new Vector3(Random.Range(-1f, 1f), 1f, Random.Range(-1f, 1f)).normalized;
             Vector3 randomTorque =
@@ -88,12 +83,12 @@ namespace Code.View
         {
             switch (value)
             {
-                case 1: return Quaternion.Euler(0, transform.rotation.y, 0);
-                case 2: return Quaternion.Euler(0, transform.rotation.y, 90);
-                case 3: return Quaternion.Euler(90, transform.rotation.y, 0);
-                case 4: return Quaternion.Euler(270, transform.rotation.y, 0);
-                case 5: return Quaternion.Euler(0, transform.rotation.y, 270);
-                case 6: return Quaternion.Euler(180, transform.rotation.y, 0);
+                case 2: return Quaternion.Euler(0, transform.rotation.y, 0);
+                case 4: return Quaternion.Euler(0, transform.rotation.y, 90);
+                case 6: return Quaternion.Euler(90, transform.rotation.y, 0);
+                case 1: return Quaternion.Euler(270, transform.rotation.y, 0);
+                case 3: return Quaternion.Euler(0, transform.rotation.y, 270);
+                case 5: return Quaternion.Euler(180, transform.rotation.y, 0);
                 default: return Quaternion.identity;
             }
         }
