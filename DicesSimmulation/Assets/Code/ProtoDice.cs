@@ -7,12 +7,12 @@ using Random = UnityEngine.Random;
 public class ProtoDice : MonoBehaviour
 {
     public int targetValue = 6; // Значение, которое должно выпасть
-    public float initialForceMin = 5f; // Минимальная сила начального импульса
-    public float initialForceMax = 10f; // Максимальная сила начального импульса
+    public float initialForceMin = 10f; // Минимальная сила начального импульса
+    public float initialForceMax = 15f; // Максимальная сила начального импульса
     public float initialTorqueMin = 10f; // Минимальный начальный крутящий момент
-    public float initialTorqueMax = 20f; // Максимальный начальный крутящий момент
-    public float correctionTorque = 10f; // Момент для корректировки ориентации
-    public float stopThreshold = 0.1f; // Порог скорости для остановки
+    public float initialTorqueMax = 15f; // Максимальный начальный крутящий момент
+    public float correctionTorque = 25f; // Момент для корректировки ориентации
+    public float stopThreshold = 5f; // Порог скорости для остановки
     public float correctionSpeed = 2f; // Скорость корректировки
 
     private Rigidbody rb;
