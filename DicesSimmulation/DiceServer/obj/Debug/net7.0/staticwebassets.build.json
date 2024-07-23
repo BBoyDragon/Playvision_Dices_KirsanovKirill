@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "aAGej68wjD5AlEaDxbzHbx5yv6h2BmyxPA4RtH8QqPE=",
+  "Source": "DiceServer",
+  "BasePath": "_content/DiceServer",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}
